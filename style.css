@@ -15,7 +15,7 @@ a{
 
 /*----  Header  ----*/
 header{
-    background-color: #eeeeee;
+    background-color: #e8f3ff;
     height: 80px;
     width:100%;
 }
@@ -87,11 +87,11 @@ nav{
 #twitter{
     width:120%;
 }
-#patreon:hover{
+#patreon:active{
     scale:98%;
     transition: 150ms;
 }
-#twitter:hover{
+#twitter:active{
     scale:98%;
 }
 #twitterNav{
@@ -217,21 +217,54 @@ footer #nomefinal{
 
 /* ---- Loja ----*/
 
-#categorias { 
-    margin: 5%; 
+#loja{
+    background-color:#222b58 ;
+    height: fit-content;
+}
+#grid-loja{
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 50px;
+    padding: 5% 5% 5% 5%;
+    border-image: fill;
+}
+#banner-loja{
+    background-color: #df0000;
+    height: 30vh;
+}
+.produtos-loja{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items:center;
+    row-gap: 25px;
+    height: fit-content;
+}
+.produtos-loja div{
+    text-align: center;
     display: flex;
-    width: 15%;
-    height: 75%;
-    float: center;
-    background-color:rgb(179, 179, 179);
-    border-radius: 3%;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    border-radius: 15px;
+    background-color: white;
 }
-#lista_c {
-    height: 7%;
+
+.produtos-loja div .posterImg{
+    height: auto;
 }
-#h3_cate {
-    margin: 12%;
+.produtos-loja div .posterImg img{
+    padding: 20px;
+    border-radius: 25px;
+    width: 80%; 
 }
+.posterPreco{
+    height: auto;
+    padding-bottom: 20px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
 
 /* ---- Novidades ---- */
 
@@ -354,12 +387,20 @@ footer #nomefinal{
         position:relative;
         bottom: 50px;
     }
+    .produtos-loja{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 @media only screen and (max-width: 786px)
 {
     #botoesNav, .botaoNav, #titulo h1, #logo{
         display: none;
+    }
+    .produtos-loja{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
     #titulomobile{
         display: flex;
@@ -404,6 +445,12 @@ footer #nomefinal{
     }
     footer{
         height: 18em;
+    }
+    .produtos-loja div{
+        width: 40vw;
+    }
+    .produtos-loja div .posterImg img{
+        padding: 4vw;
     }
 }
 
