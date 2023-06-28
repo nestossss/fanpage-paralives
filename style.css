@@ -175,6 +175,18 @@ h1{
     color: #eeeeee;
 }
 
+.patron {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 100px;
+
+}
+.potao_patron {
+    
+}
+
+
 /* ---- Footer ----*/
 
 footer{
@@ -222,7 +234,7 @@ footer #nomefinal{
 #grid-loja{
     display: grid;
     grid-template-columns: 100%;
-    gap: 80px;
+    gap: 4vw;
     padding: 5% 5% 5% 5%;
 }
 #banner-mobile{
@@ -234,13 +246,13 @@ footer #nomefinal{
 }
 #banner-loja img{
     width: 100%;
-    box-shadow: 2px 5px 8px rgba(26, 15, 15, 0.63);
+    box-shadow: 2px 5px 8px #1a0f0fa1;
 }
 .produtos-loja{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 .produtos-loja div{
@@ -248,7 +260,7 @@ footer #nomefinal{
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: auto;
+    width: 15em;
     border-radius: 15px;
     background-color: white;
 }
@@ -285,20 +297,25 @@ footer #nomefinal{
     scale: 102%;
     background-color: #a55fdb;
     transition: 300ms;
+    color: white;
+    font-weight: bold;
 }
 .botao-comprar button:active{
     scale: 98%;
     background-color: #a762db;
     transition: 103ms;
+    color: white;
+    font-weight: bold;
 }
 .botao-comprar button{
     background-color: #B78FD6;
     border-radius: 20px;
     border: none;
-    width: 150px;
-    height: 20px;
+    width: 10em;
+    height: auto;
     color: white;
     margin-top: 10%;
+    font-weight: bold;
 
 }
 
@@ -313,6 +330,15 @@ footer #nomefinal{
     float: center;
     background-color: rgb(179, 179, 179);
     border-radius: 3%;
+    
+}
+
+#nov_pluhsies {
+    
+
+}
+
+#nov_banheiro {
     
 }
 
@@ -345,6 +371,7 @@ footer #nomefinal{
   }
   
 #descricao{
+    font-size: 135%;
     text-align: center;
     color: #181818;
     animation-name: slidein;
@@ -364,7 +391,7 @@ footer #nomefinal{
 .div-conteiner {
     height: fit-content;
     text-align: center;
-    padding: 20% 20%;
+    padding: 15%;
 }
 
 .secao-vede{
@@ -431,6 +458,13 @@ footer #nomefinal{
     padding: 5%;
 
 }
+
+#text-foto{
+    color: white;
+    font-size: 150%;
+    padding-right: 8%;
+}
+
 /* --- Responsivo ---*/
 
 @media only screen and (max-width: 1024px)
@@ -518,6 +552,24 @@ footer #nomefinal{
     #twitter{
         display: none;
     }
+    .produtos-loja .produto{
+        width: 40vw;
+        font-size: 2.4vw;
+    }
+    .produtos-loja div .posterImg{
+        max-height: 15em;
+        width: 40vw;
+    }
+    .produtos-loja div .posterImg img{
+        padding: 2em;
+        width: 35vw; 
+    }
+    .produtos-loja .posterPreco, .texto-comprar, .botao-comprar{
+        width: 32vw;
+    }
+    .botao-comprar button{
+        font-size: 2.4vw;
+    }
 }
 @media only screen and (max-height: 300px)
     {
@@ -530,12 +582,6 @@ footer #nomefinal{
             bottom: -30px;
         }
     }
-@media only screen and (max-width: 440px)
-{
-    .produto{
-        width: 60vw;
-    }
-}
 
 
 
