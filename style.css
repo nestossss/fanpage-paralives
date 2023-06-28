@@ -15,7 +15,7 @@ a{
 
 /*----  Header  ----*/
 header{
-    background-color: #e8f3ff;
+    background-color: #f8f8f8;
     height: 80px;
     width:100%;
 }
@@ -98,7 +98,6 @@ nav{
     margin-left: 8%;
 }
 
-
 /* ---- Home ---- */
 
 #telainicial{
@@ -123,7 +122,6 @@ nav{
     height: 18%;
     margin-bottom: 10%;
     margin-left: 8%;
-    
 }
 h1{
     font-weight: 400;
@@ -218,51 +216,90 @@ footer #nomefinal{
 /* ---- Loja ----*/
 
 #loja{
-    background-color:#222b58 ;
+    background-color: #458d60;
     height: fit-content;
 }
 #grid-loja{
     display: grid;
     grid-template-columns: 100%;
-    gap: 50px;
+    gap: 80px;
     padding: 5% 5% 5% 5%;
-    border-image: fill;
+}
+#banner-mobile{
+    display: none;
 }
 #banner-loja{
-    background-color: #df0000;
-    height: 30vh;
+    width: 100%;
+    height: auto;
+}
+#banner-loja img{
+    width: 100%;
+    box-shadow: 2px 5px 8px rgba(26, 15, 15, 0.63);
 }
 .produtos-loja{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items:center;
-    row-gap: 25px;
-    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 .produtos-loja div{
     text-align: center;
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 200px;
+    width: auto;
     border-radius: 15px;
     background-color: white;
 }
-
+.produto p{
+    font-family: 'KoHo', sans-serif;  
+}
+.produto{
+    box-shadow: 2px 5px 8px #2c2c2ca1; 
+    width: 20vw;
+    margin-bottom: 40px;
+}
 .produtos-loja div .posterImg{
-    height: 260px;
+    height: 15em;
+    width: 200px;
 }
 .produtos-loja div .posterImg img{
     padding: 20px;
-    border-radius: 25px;
-    width: 80%; 
+    width: 180px; 
 }
 .posterPreco{
     height: auto;
     padding-bottom: 20px;
     display: flex;
-    flex-grow: 1;
+    padding: 20px;
     justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.botao-comprar img{
+    width: 30px;
+    cursor: pointer;
+}
+.botao-comprar button:hover{
+    scale: 102%;
+    background-color: #a55fdb;
+    transition: 300ms;
+}
+.botao-comprar button:active{
+    scale: 98%;
+    background-color: #a762db;
+    transition: 103ms;
+}
+.botao-comprar button{
+    background-color: #B78FD6;
+    border-radius: 20px;
+    border: none;
+    width: 150px;
+    height: 20px;
+    color: white;
+    margin-top: 10%;
+
 }
 
 
@@ -321,31 +358,45 @@ footer #nomefinal{
     justify-content: center;
     align-items: center;
     height: 100%;
+    
 }
 
 .div-conteiner {
     height: fit-content;
     text-align: center;
-    padding: 10% 20%;
+    padding: 20% 20%;
 }
 
 .secao-vede{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 50%;
+    width: 100%;
     border-radius: 19px 19px 19px 19px ;
-    background-image: linear-gradient(180deg, #b7e23e 0%, #fff8bb 66.15%);
     box-shadow: 0em 0.3em 7px #5858587c;
+    background-image: url(imagens/Triangulovede.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-#img-equipe{
-    max-width: 100%;
-    height: auto;
-    border: 5cap solid black;
-    padding-left: 10%;
-}
-
 #contsecaovede{
-    display: inline-flex;
-
+    display: flex;
+    flex-direction: row ;
+    align-items: center;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    text-align: center;
+}
+#contsecaovede p{
+    width: 50%;
+}
+#img-equipe{
+    width: 50%;
+}
+#img-equipe img{
+    width: 75%;
+    border-radius: 10%;
+    border: white solid 3px;
 }
 
 .separacaorst {
@@ -361,7 +412,7 @@ footer #nomefinal{
   }
 
 .cartao {
-    border: 1px solid #000000;
+    background-color: #F2F2F2;
     border-radius: 8px;
     width: 200px;
     height: 300px;
@@ -370,6 +421,7 @@ footer #nomefinal{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: #181818c9;
   }
 
 #titulo_equipe{
@@ -387,21 +439,38 @@ footer #nomefinal{
         position:relative;
         bottom: 50px;
     }
-    .produtos-loja{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+}
+@media only screen and (max-width: 900px)
+{
+    #banner-completo{
+        display: none;
+    }
+    #banner-mobile{
+        display: block;
+    }
+    #titulo{
+        position: relative;
+        bottom: 75px;
+    }
+    #logo{
+        position: relative;
+        left: 30px;
+        
     }
 }
-
 @media only screen and (max-width: 786px)
 {
     #botoesNav, .botaoNav, #titulo h1, #logo{
         display: none;
     }
-    .produtos-loja{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
+    #banner-loja{
+    width: 100%;
+    height: auto;
+}
+#banner-loja img{
+    width: 100%;
+    box-shadow: 2px 5px 8px rgba(26, 15, 15, 0.63);
+}
     #titulomobile{
         display: flex;
         justify-content: center;
@@ -446,14 +515,27 @@ footer #nomefinal{
     footer{
         height: 18em;
     }
-    .produtos-loja div{
-        width: 40vw;
-    }
-    .produtos-loja div .posterImg img{
-        padding: 4vw;
+    #twitter{
+        display: none;
     }
 }
-
+@media only screen and (max-height: 300px)
+    {
+        #bandeira{
+            position: relative;
+            top: 0;
+        }
+        #titulo{
+            position: relative;
+            bottom: -30px;
+        }
+    }
+@media only screen and (max-width: 440px)
+{
+    .produto{
+        width: 60vw;
+    }
+}
 
 
 
