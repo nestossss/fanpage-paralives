@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 body{
-
+    user-select: none;
     font-family: 'Belanosima', sans-serif;
 }
 ul{
@@ -46,34 +46,32 @@ nav{
     font-size: 1.2rem;
     width: 150px;
     font-family: 'Belanosima', sans-serif;
-    box-shadow: 2px 5px 8px #a3a3a3;
+    transition: 200ms;
 }
 .botaoNav:hover{
-    background-color: #56a1f7;
+    background-color: #44B0FF;
     cursor: pointer;
     scale:103%;
     transition: 200ms;
-    box-shadow: 3px 5px 8px #a3a3a3;
 }
 .botaoNav:active{
     background-color: #56a1f7;
     cursor: pointer;
     scale:98%;
     transition: 150ms;
-    box-shadow: 2px 5px 8px #a3a3a3;
+    box-shadow: inset 0px 0px 4px #525151;
 }
 #logo{
     grid-area:logo;
     height: 50px;
+    width: fit-content;
     position:relative;
     left: 65px;
 }
 #logo img{
     width: 150px;
     height: auto;
-
 }
-
 #redes{
     display:flex;
     align-items: center;
@@ -81,17 +79,17 @@ nav{
     margin-right: 5px;
     grid-area:redes;
 }
-#patreon{
+#patreonNavImg{
     width:120%;
 }
-#twitter{
+#twitterNavImg{
     width:120%;
 }
-#patreon:active{
+#patreonNavImg:active{
     scale:98%;
     transition: 150ms;
 }
-#twitter:active{
+#twitterNavImg:active{
     scale:98%;
 }
 #twitterNav{
@@ -127,7 +125,7 @@ h1{
     font-weight: 400;
     font-size: 4rem;
     color: #eeeeee;
-}
+}   
 #wishlist{
     font-family: 'Irish Grover', cursive;
     font-weight: 600;
@@ -139,12 +137,13 @@ h1{
     font-size: 1.25rem;
     width: 7em;
     border-radius: 2em;
+    transition: 0.5s;
     cursor:pointer;
 }
 #wishlist:hover{
-    background-color: #e2e1e1;
-    scale: 98%;
+    background-color: #ffffff;
     transition: 0.5s;
+    scale: 103%;
 }
 #bandeira{
     position: relative;
@@ -159,12 +158,9 @@ h1{
     color: #ffffff;
     font-size: 24px;
     font-family: 'Irish Grover', cursive;
-    box-shadow: 2px 5px 8px #a3a3a3;
+    box-shadow: 2px 4px 15px #1d1d1dd8;
     text-align: center;
-}
-#bandeira img{
-    width:100%;
-    height: 10vw;
+    margin-bottom: -100px;
 }
 #bandeira #textoBandeira{
     text-align: center;
@@ -174,23 +170,49 @@ h1{
     font-size:x-large;
     color: #eeeeee;
 }
-
-.patron {
-    display: grid;
-    width: 100vw;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 100px;
-
+   
+#patreon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(imagens/fundo_patreon1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vw;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    margin: 10% 0 10% 0;
 }
-.potao_patron {
-    
+#patreon img{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 8px 8px #363636d8;
+}
+#patreon a{
+    transition: 500ms;
+}
+#patreon a:hover{
+    scale: 105%;
+    transition: 500ms;
+}
+#patreon p{
+    margin: 0.5em;
+    text-shadow: 2px 2px 10px #18181881;
+}
+.botao_patreon{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 34vw;
+    flex-direction: column;
 }
 
 
 /* ---- Footer ----*/
 
 footer{
-    position: relative;
     background-color: #3b3b3b;
     height: 12em;
     font-size: 1.2em;
@@ -215,7 +237,7 @@ footer #nomefinal{
     height: 1em;
 }
 .linkfooter{
-
+    transition: 100ms;
     text-decoration-line: none;
     color: #eeeeee;
 }
@@ -228,7 +250,7 @@ footer #nomefinal{
 /* ---- Loja ----*/
 
 #loja{
-    background-color: #458d60;
+    background-color: #5f9ea0;
     height: fit-content;
 }
 #grid-loja{
@@ -252,7 +274,7 @@ footer #nomefinal{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 .produtos-loja div{
@@ -295,10 +317,9 @@ footer #nomefinal{
 }
 .botao-comprar button:hover{
     scale: 102%;
-    background-color: #a55fdb;
+    background-color: #c479fd;
     transition: 300ms;
     color: white;
-    font-weight: bold;
 }
 .botao-comprar button:active{
     scale: 98%;
@@ -308,7 +329,7 @@ footer #nomefinal{
     font-weight: bold;
 }
 .botao-comprar button{
-    background-color: #B78FD6;
+    background-color: #a460d8;
     border-radius: 20px;
     border: none;
     width: 10em;
@@ -316,7 +337,7 @@ footer #nomefinal{
     color: white;
     margin-top: 10%;
     font-weight: bold;
-
+    transition: 300ms;
 }
 
 
@@ -335,9 +356,7 @@ footer #nomefinal{
 
 #nov_pluhsies {
     
-
 }
-
 #nov_banheiro {
     
 }
@@ -357,8 +376,14 @@ footer #nomefinal{
     animation-fill-mode: both;
 }
 
+#titulao{ 
+    text-align: center;
+    padding: 2% 3%;
+    font-size: 15%; 
+    background-color: #44B0FF;
+    color: #000;
+}
 
-    
 @keyframes slidein {
     0% {
         opacity: 0;
@@ -368,16 +393,21 @@ footer #nomefinal{
         opacity: 1;
         transform: translateY(0);
       }
-  }
+}
   
 #descricao{
     font-size: 135%;
     text-align: center;
-    color: #181818;
+    color: #ececec;
     animation-name: slidein;
     animation-duration: 1s;
     animation-delay: 0.5s;
     animation-fill-mode: both;
+}
+
+#ptAzul{
+    height: 10vh;
+    background-color: #44B0FF;
 }
 
 .div-equi{
@@ -385,27 +415,30 @@ footer #nomefinal{
     justify-content: center;
     align-items: center;
     height: 100%;
-    
+    background-image: url(imagens/fparalives.jpg);
+    background-size: cover;
+    background-position: center;  
 }
 
 .div-conteiner {
     height: fit-content;
     text-align: center;
-    padding: 15%;
+    padding: 10%;
 }
 
-.secao-vede{
+#secao-vede{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 50%;
     width: 100%;
-    border-radius: 19px 19px 19px 19px ;
-    box-shadow: 0em 0.3em 7px #5858587c;
+    box-shadow: 10px 10px 7px #5858587c;
     background-image: url(imagens/Triangulovede.png);
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
+
 #contsecaovede{
     display: flex;
     flex-direction: row ;
@@ -414,48 +447,36 @@ footer #nomefinal{
     padding-bottom: 8%;
     text-align: center;
 }
+
 #contsecaovede p{
     width: 50%;
 }
+
+#seta img {
+    width: 5%;
+    padding-top: 10%;
+    cursor: pointer;
+    animation-name: setaBaixo;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 #img-equipe{
     width: 50%;
 }
+
 #img-equipe img{
     width: 75%;
-    border-radius: 10%;
+    border-radius: 40px;
     border: white solid 3px;
 }
-
-.separacaorst {
-    display: flex;
-    justify-content: center;
-}
-
-.foto-perfil {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-  }
-
-.cartao {
-    background-color: #F2F2F2;
-    border-radius: 8px;
-    width: 200px;
-    height: 300px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: #181818c9;
-  }
 
 #titulo_equipe{
     font-size: 30px; 
     color: #44B0FF;
     text-align: center;
-    padding: 5%;
 
 }
 
@@ -465,6 +486,52 @@ footer #nomefinal{
     padding-right: 8%;
 }
 
+.grid-equipe{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5%;
+    column-gap: 10%;
+    padding: 5% 5%;
+}
+
+.card{
+    background-color: #f8f8f8;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 2px #00000033;
+    height: 20vw;
+    transition: transform 0.5s ease;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+
+
+.card img{
+    max-width: 50%;
+    border-radius: 50%;
+    padding: 5% 5%;
+}
+
+.cargo{
+    padding: 2%;
+    display: block;
+    color: #3b3b3b;
+}
+
+.conteudocard button{
+    background-color: #44B0FF;
+    border-radius: 10px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    margin-top: 5%;
+}
+
 /* --- Responsivo ---*/
 
 @media only screen and (max-width: 1024px)
@@ -472,6 +539,14 @@ footer #nomefinal{
     #titulo{
         position:relative;
         bottom: 50px;
+    }
+    #patreon{
+        height: 80vw;
+        font-size: 3vw;
+    }
+    .botao_patreon{
+        height: 100%;
+        width: 42vw;
     }
 }
 @media only screen and (max-width: 900px)
@@ -498,13 +573,13 @@ footer #nomefinal{
         display: none;
     }
     #banner-loja{
-    width: 100%;
-    height: auto;
-}
-#banner-loja img{
-    width: 100%;
-    box-shadow: 2px 5px 8px rgba(26, 15, 15, 0.63);
-}
+        width: 100%;
+        height: auto;
+    }
+    #banner-loja img{
+        width: 100%;
+        box-shadow: 2px 5px 8px rgba(26, 15, 15, 0.63);
+    }
     #titulomobile{
         display: flex;
         justify-content: center;
@@ -540,6 +615,14 @@ footer #nomefinal{
         position: relative;
         left: 10px;
     }
+    #patreon{
+        height: 80vw;
+        font-size: 4vw;
+    }
+    .botao_patreon{
+        height: 100%;
+        width: 50vw;
+    }
 }
 @media only screen and (max-width: 600px)
 {
@@ -549,7 +632,7 @@ footer #nomefinal{
     footer{
         height: 18em;
     }
-    #twitter{
+    #twitterNavImg{
         display: none;
     }
     .produtos-loja .produto{
@@ -570,20 +653,56 @@ footer #nomefinal{
     .botao-comprar button{
         font-size: 2.4vw;
     }
+    #patreon{
+        height: 90vw;
+    }
+    .botao_patreon{
+        height: 100%;
+        width: 60vw;
+    }
 }
 @media only screen and (max-height: 300px)
-    {
+{
         #bandeira{
             position: relative;
+            margin-bottom: 0;
             top: 0;
         }
         #titulo{
             position: relative;
             bottom: -30px;
         }
+}
+
+
+
+@media only screen and (max-width: 414px)
+{
+    #contsecaovede{
+        flex-direction: column;
+        font-size: 50%;
     }
 
+    #seta img{
+        display: none;
+    }
+    #patreon{
+        height: 100vw;
+        font-size: 6vw;
+    }
+    .botao_patreon{
+        height: 100%;
+        width: 75vw;
+    }
+}
 
+@media only screen and (max-width: 970px)
+{
+    #seta img{
+        width: 14%;
+    }
+
+}
 
 
 

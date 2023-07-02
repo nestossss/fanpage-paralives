@@ -32,8 +32,8 @@
           </div>
           <!-- Mobile -->
           <div id="redes">
-              <a id="patreonNav" href="https://www.patreon.com/alexmasse"><img id="patreon" src="imagens/patreon.png"></a>
-              <a id="twitterNav" href="https://twitter.com/ParalivesGame"><img id="twitter" src="imagens/twitter.png"></a>
+            <a id="patreonNav" href="https://www.patreon.com/alexmasse"><img id="patreonNavImg" src="imagens/patreon.png"></a>
+            <a id="twitterNav" href="https://twitter.com/ParalivesGame"><img id="twitterNavImg" src="imagens/twitter.png"></a>
           </div>
       </nav>
   </header>
@@ -42,38 +42,138 @@
       <div class="div-conteiner">
         <h1 id="t3" > Conheça a equipe!</h1>
         <p id="descricao"> Olá, sou o Alex! Minha equipe e eu estamos desenvolvendo o Paralives, um próximo jogo de simulação de vida. Paralives é um jogo indie de simulação de vida em mundo aberto. Construa a casa dos seus sonhos, crie personagens e gerencie suas vidas do jeito que você quiser! O jogo está em desenvolvimento e será lançado no Steam para PC e Mac. Você pode <a href="https://store.steampowered.com/app/1118520/Paralives/">adicioná-lo à sua lista de desejos no Steam agora mesmo!</a></p>
+        <div id="seta">
+          <a href="#secao-vede">
+          <img src="imagens\seta.png">
+          </a>
+
+          <script>
+            document.querySelector('a[href="#secao-vede"]').addEventListener('click', function(e) {
+              e.preventDefault();
+              document.getElementById('secao-vede').scrollIntoView({ behavior:'smooth' });
+            });
+          </script>
+        </div>
       </div>
     </div>
-    <div class="secao-vede">
+    
+    <div id="ptAzul"> ..</div>
+
+    <div id="secao-vede">
         <div id="contsecaovede">
           <div id="img-equipe">
             <img src="imagens/Equipe.jpg">
           </div>
+
           <p id="text-foto">a equipe do palives é uma equipe muito equipada a equipe do palives é uma equipe muito equipada a equipe do palives é uma equipe muito equipada a equipe do palives é uma equipe muito equipada a equipe do palives é uma equipe muito equipada</p>
         </div>
     </div>
     <p id="titulao">A equipe</p>
-    <div class="separacaorst">
-        <div class="cartao">
-          <img class="foto-perfil" src="imagens/alex_masse.jpg" alt="alex_masse">
-          <h3>Alex massé</h3>
-          <p class="Descrição">Founder and Lead Developer</p>
-        </div>
-        
-        <div class="cartao">
-          <img class="foto-perfil" src="imagem2.jpg" alt="Foto de Perfil">
-          <h3>Nome 2</h3>
-          <p>Descrição 2</p>
-        </div>
-        
-        <div class="cartao">
-          <img class="foto-perfil" src="imagem3.jpg" alt="Foto de Perfil">
-          <h3>Nome 3</h3>
-          <p>Descrição 3</p>
+    
+    <div class="grid-equipe">
+      <div class="card">
+        <div class="conteudocard">
+          <img src="imagens\alex_masse.jpg">
+          <h3 id="nome">Alex massé</h3>
+          <p>
+            <span class="cargo">Fundador</span>
+            <span class="cargo">Desenvovedor</span>
+            <span class="cargo">Líder</span>
+          </p>
+          <button>@alex_masse<button>
         </div>
       </div>
+      <div class="card">
+        <div id="card1">
+          <div class="conteudocard">
+            <img src="imagens\alex_masse.jpg">
+            <h3 id="nome">nome</h3>
+            <p class="cargo">main developer</p>
+            <p class="descricao-card"></p>
+        </div>
+        
+        </div>
+      </div>
+      <div class="card">
+        <div class="conteudocard">
+          <img src="imagens\alex_masse.jpg">
+          <h3 id="nome">léa sorribès</h3>
+          <p class="cargo">Game artist</p>
+          <p class="descricao-card"></p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="conteudocard">
+          <img src="imagens\alex_masse.jpg">
+          <h3 id="nome">anna thibert</h3>
+          <p>
+            <span class="cargo">Programador</span>
+            <span class="cargo">Desenvovedor</span>
+          </p>
+          <button>@alex_masse</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="conteudocard">
+          <img src="imagens\alex_masse.jpg">
+          <h3 id="nome">nome</h3>
+          <p class="cargo">main developer</p>
+          <p class="descricao-card"></p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="conteudocard">
+          <img src="imagens\alex_masse.jpg">
+          <h3 id="nome">nome</h3>
+          <p class="cargo">main developer</p>
+          <p class="descricao-card"></p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="conteudocard">
+          <img src="imagens\alex_masse.jpg">
+          <h3 id="nome">nome</h3>
+          <p class="cargo">main developer</p>
+          <p class="descricao-card"></p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="conteudocard">
+          <img src="imagens\alex_masse.jpg">
+          <h3 id="nome">nome</h3>
+          <p class="cargo">main developer</p>
+          <p class="descricao-card"></p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="conteudocard">
+          <img src="imagens\alex_masse.jpg">
+          <h3 id="nome">nome</h3>
+          <p class="cargo">main developer</p>
+          <p class="descricao-card"></p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="conteudocard">
+          <img src="imagens\alex_masse.jpg">
+          <h3 id="nome">nome</h3>
+          <p class="cargo">main developer</p>
+          <p class="descricao-card"></p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="conteudocard">
+          <img src="imagens\alex_masse.jpg">
+          <h3 id="nome">nome</h3>
+          <p class="cargo">main developer</p>
+          <p class="descricao-card"></p>
+        </div>
+      </div>
+
+
     </div>
 
+    
       <footer>
             <br>
         <div class="canais">
