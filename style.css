@@ -380,7 +380,7 @@ footer #nomefinal{
     justify-content: space-between;
     width: 100%;
     margin-top: 6%;
-    margin-bottom: 2%;
+    margin-bottom: 0%;
 }
 .cont-atualiza-recente{
     box-shadow: 2px 4px 6px#1a0f0fa1;
@@ -424,10 +424,13 @@ footer #nomefinal{
     align-items: center;
     text-align: center;
 }
+.nov-atualiza-outro{
+    width: 84%;
+}
 .nov-outro{
     display: flex;
     width: 100%;
-    height: 50vh;
+    height: 24vw;
     margin-top: 6%;
     overflow: hidden;
     border-radius: 8px;
@@ -476,7 +479,7 @@ footer #nomefinal{
 }
 .nov-outro-imagem img{
     scale:120%;
-    filter:saturate(25%) blur(2px);
+    filter:saturate(60%) blur(1px);
     height: 100%;
     width: 100%;
     transition: 0.5s;
@@ -499,6 +502,9 @@ footer #nomefinal{
     background-color: #ffffff;
     color:#F68B27;
     font-size: 28px;
+}
+.nov-nome p{
+    width: 92%;
 }
 .nov-outro-desc{
     width: 100%;
@@ -706,6 +712,7 @@ footer #nomefinal{
         height: 100%;
         width: 42vw;
     }
+    
 }
 @media only screen and (max-width: 900px)
 {
@@ -723,6 +730,29 @@ footer #nomefinal{
         position: relative;
         left: 30px;
         
+    }
+    .nov-outro{
+        height: 32vw;
+    }
+    .nov-outro-imagem img, .nov-outro-imagem img:hover{
+        scale:100%;
+        filter:saturate(100%) blur(0px);
+        height: 100%;
+        width: 100%;
+        transition: 0;
+    }
+    .nov-outro-imagem.nov-outro-img3, .nov-outro-imagem.nov-outro-img3 img{
+        display: none;
+    }
+    .nov-outro-imagem{
+        width: 50%;
+    }
+    .nov-nome{
+        font-size: 3vw;
+        height: 2em
+    }
+    .nov-outro-imagens{
+        height: 26vw;
     }
 }
 @media only screen and (max-width: 786px)
@@ -782,6 +812,52 @@ footer #nomefinal{
         width: 50vw;
     }
 }
+@media only screen and (max-width: 660px)
+{
+    .nov-titulo{
+        padding: 6%;
+    }
+    #nov-atualiza-recente{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        flex-direction: column;
+    }
+    .cont-atualiza-recente{
+        width: 100%;
+        margin: 10%;
+    }
+    #cont-nov-recente{
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nov-outro-detalhes{
+        position: relative;
+        left: -10%;
+        margin-right: -10%;
+    }
+    .nov-outro-imagem.nov-outro-img2, .nov-outro-imagem.nov-outro-img2 img{
+        display: none;
+    }
+    .nov-outro-imagem{
+        width: 100%;
+    }
+    .nov-outro{
+        height: 60vw;
+    }
+    .nov-atualiza-outro{
+        width: 100%;
+    }
+    .nov-nome{
+        font-size: 4vw;
+        height: 12vw;
+    }
+    .nov-outro-imagens{
+        height: 48vw;
+    }
+
+}   
 @media only screen and (max-width: 600px)
 {
     .canais{
@@ -820,6 +896,9 @@ footer #nomefinal{
     }
     .grid-equipe {
         grid-template-columns: 1fr 1fr;
+    }
+    .nov-titulo p{
+        font-size: 10vw;
     }
 }
 @media only screen and (max-height: 300px)
@@ -870,6 +949,8 @@ footer #nomefinal{
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
+
+
 
 
 
