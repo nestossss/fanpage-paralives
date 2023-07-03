@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 body{
@@ -334,7 +335,7 @@ footer #nomefinal{
     border: none;
     width: 10em;
     height: auto;
-    color: white;
+    color: #ffffff;
     margin-top: 10%;
     font-weight: bold;
     transition: 300ms;
@@ -343,22 +344,177 @@ footer #nomefinal{
 
 /* ---- Novidades ---- */
 
-#novidades {
-    margin: 5%;
-    display: flex;
-    width: 15%;
-    height: 75%;
-    float: center;
-    background-color: rgb(179, 179, 179);
-    border-radius: 3%;
-    
+#nov-recente, #nov-outros{
+    color: #ffffff;
+    text-align: center;
 }
 
-#nov_pluhsies {
-    
+.nov-titulo{
+    color: #ffffff;
+    text-shadow: 2px 2px 2px#00000033;
+    font-family: 'Irish Grover', cursive;
+    border-radius: 5px;
+    width: fit-content;
 }
-#nov_banheiro {
-    
+.nov-titulo p{
+    font-size: 50px;
+}
+
+#nov-recente{
+    font-family: 'Irish Grover', cursive;
+    background-image: linear-gradient(#80C7C9 25%, #E4FEFF);
+}
+
+#cont-nov-recente{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+#nov-atualiza-recente{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 6%;
+    margin-bottom: 2%;
+}
+.cont-atualiza-recente{
+    box-shadow: 2px 4px 6px#1a0f0fa1;
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: scale 500ms;
+}
+.cont-atualiza-recente img{
+    height: 100%;
+}
+.nov-recente-texto{
+    background-color: #FB954B;
+    font-weight: 500;
+    font-size: 1.5em;
+    padding: 0.20em;
+    padding-bottom: 0.35em;
+    scale:140%;
+    rotate: -2deg;
+}
+.nov-recente-texto p{
+    rotate: 2deg;
+}
+.cont-atualiza-recente:hover{
+    scale: 105%;
+    transition: 500ms;
+}
+
+#nov-outros{
+    background-image: linear-gradient( #A6D915, #EBDD64 60%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+}
+#cont-nov-outros{
+    padding: 6%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.nov-outro{
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    margin-top: 6%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px#202020a1;
+}
+.nov-data{
+    z-index: 1;
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: 'Irish Grover', cursive;
+}
+.nov-data-texto{
+    position: absolute;
+}
+.nov-data-texto p{
+    position: relative;
+    font-size: 28px;
+    right: 15%;
+}
+.nov-data-img, .nov-data-img img{
+    height: 100%;
+}
+
+.nov-outro-detalhes{
+    position: relative;
+    left: -5%;
+    margin-right: -5%;
+    z-index: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 105%;
+}
+.nov-outro-imagens{
+    display: flex;
+    justify-content: space-between;
+    height: 85%;
+}
+.nov-outro-imagem{
+    height: 100%;
+    overflow: hidden;
+    width: calc(100%/3);
+}
+.nov-outro-imagem img{
+    scale:120%;
+    filter:saturate(25%) blur(2px);
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+.nov-outro-imagem img:hover{
+    scale:100%;
+    filter:saturate(100%) blur(0px);
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+
+
+.nov-nome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    background-color: #ffffff;
+    color:#F68B27;
+    font-size: 28px;
+}
+.nov-outro-desc{
+    width: 100%;
+    margin-top: 3%;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 1px 2px 6px#202020a1;
+    color:#000000;
+}
+.nov-outro-desc p{
+    padding: 0.5em;
+    font-size: 20px;
+}
+
+.outro-margin{
+    margin-top: 5%;
 }
 
 /* ---- Equipe ---- */
@@ -467,6 +623,7 @@ footer #nomefinal{
     width: 50%;
 }
 
+
 #img-equipe img{
     width: 75%;
     border-radius: 40px;
@@ -494,34 +651,34 @@ footer #nomefinal{
     padding: 5% 5%;
 }
 
-.card{
+.card {
     background-color: #f8f8f8;
     text-align: center;
     border-radius: 15px;
     box-shadow: 0px 0px 10px 2px #00000033;
-    height: 20vw;
+    height: 25vw;
     transition: transform 0.5s ease;
-}
 
-.card:hover{
+  }
+  
+  .card:hover {
     transform: scale(1.1);
-}
-
-
-
-.card img{
+  }
+  
+  .card img {
     max-width: 50%;
     border-radius: 50%;
     padding: 5% 5%;
-}
-
-.cargo{
+  }
+  
+  .cargo {
     padding: 2%;
     display: block;
     color: #3b3b3b;
-}
-
-.conteudocard button{
+    font-size: 80%;
+  }
+  
+  .conteudocard button {
     background-color: #44B0FF;
     border-radius: 10px;
     text-align: center;
@@ -530,7 +687,8 @@ footer #nomefinal{
     font-weight: bold;
     color: white;
     margin-top: 5%;
-}
+  }
+  
 
 /* --- Responsivo ---*/
 
@@ -660,6 +818,9 @@ footer #nomefinal{
         height: 100%;
         width: 60vw;
     }
+    .grid-equipe {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 @media only screen and (max-height: 300px)
 {
@@ -704,7 +865,11 @@ footer #nomefinal{
 
 }
 
-
+@media only screen and (max-width: 1116px) {
+    .grid-equipe {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
 
 
 
