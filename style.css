@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 body{
-    user-select: none;
     font-family: 'Belanosima', sans-serif;
 }
 ul{
@@ -182,6 +181,7 @@ h1{
     position: relative;
     top: -3vh;
     margin-bottom: -3vh;
+    z-index: 4;
     padding: 3vw;
     padding-top:4vw;
     width: 100%;
@@ -190,9 +190,9 @@ h1{
 
 #divisao{
     width:100%;
-    height: 544px;
+    height: fit-content;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     
 }
@@ -217,25 +217,35 @@ h1{
 
 #texto-sep{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 36vw;
+    width: 45vw;
+    height: 60%;
     font-size: 20px;
     flex-direction: column;
     text-align: center;
 }
 #texto-sep p{
-    width: 50%;
+    width:50%;
 }
 #img-sala{
-    height: 45vh;
-    width: 65vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    justify-self: center;
+    margin-left:6%;
+    height: 25vw;
+    width: 40vw;
 }
 #img-sala img{
     height: 100%;
     width: 100%;
     border-radius: 50px;
-
+}
+#patreon-ptazul{
+    position: relative;
+    top:-3vw;
+    margin-bottom:-3vw;
 }
 
 #patreon{
@@ -246,24 +256,23 @@ h1{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
     height: 70vw;
-    z-index: -1;
     position: relative;
-    top: -1vw;
-    margin-bottom: -1vw;
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: 28px;
 }
+
 #patreon img{
     width: 100%;
     border-radius: 15px;
     box-shadow: 0px 8px 8px #363636d8;
-}
-#patreon a{
+    cursor: pointer;
     transition: 500ms;
 }
-#patreon a:hover{
+
+#patreon img:hover{
     scale: 105%;
     transition: 500ms;
 }
@@ -278,15 +287,19 @@ h1{
     width: 34vw;
     flex-direction: column;
 }
+#patreon-titulo{
+    padding:1em 0em 1em 0em;
+}
 
 #inicio-ptazul{
-    background-color: #44B0FF;
+    background-color: #56a1f7;
     box-shadow: 0px 0px 38px rgba(49, 49, 49, 0.877);
     width:100%;
     height: 10vw;
+    z-index: 15;
 }
 #secao-discord{
-    height: 50vw;
+    height: 65vw;
     display: flex;
     align-items:center;
     justify-content: center;
@@ -309,7 +322,7 @@ h1{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 35vw;
+    width: 45vw;
     height: 80% ;
 }
 #disc-botao{
@@ -845,10 +858,6 @@ footer #nomefinal{
     color: white;
     margin-top: 5%;
   }
-
-  .conteudocard button:active{
-    
-  }
   
 
 /* --- Responsivo ---*/
@@ -857,23 +866,44 @@ footer #nomefinal{
         display:none;
     }
     #disc-botao{
-        height: 40%;
+    height:fit-content;
     }
+    #disc-cont{
+    width: 60vw;
+    }
+    #disc-texto p{
+    width: 100%;
+    font-size: 3vw;
+    }
+    #disc-texto h3{
+       font-size: 5vw;
+    }
+    #disc-texto{
+    width: 100%;
+    } 
     #secao-discord{
-    height: 70vw;
+    height: 75vw;
+    }
+    .inicio-sep{
+    height:80vw;
     }
     #divisao{
+    height: fit-content;
     flex-direction: column;
+    justify-content:center;
     }
     #texto-sep{
-        width: 100vh;
+        height:35%;
     }
     #texto-sep p{
+	width: 100%;
         font-size: 3vw;
         padding: 1.5vw;
         text-align: unset;
     }
-
+    #img-sala{
+        margin: 0;
+    }
 
 }
 @media only screen and (max-width: 1116px) {
@@ -1046,7 +1076,7 @@ footer #nomefinal{
         justify-content: space-between;
     }
     #secao-discord{
-        height: 120vw;
+        height: 140vw;
     }
     #disc-cont{
         height: 70%;
@@ -1057,6 +1087,12 @@ footer #nomefinal{
     } 
     #disc-botao img{
         height: auto;
+    }
+    #disc-texto p{
+    font-size: 5vw;
+    }
+    #disc-texto h3{
+       font-size: 8vw;
     }
     .nov-outro-detalhes{
         position: relative;
@@ -1105,12 +1141,27 @@ footer #nomefinal{
     #titulo-foto{
         font-size: 4em;
     }
+    #divisao{
+        height:fit-content;
+    }
+    #texto-sep{
+        width: 65vw;
+    }
     #texto-sep p{
         font-size: 4.5vw;
         padding: 1.5vw;
         text-align: center;
     }
-
+    #img-sala{
+        width: 65vw;
+        height: auto;
+    }
+    #img-sala img{
+        border-radius: 14px;
+    }
+    #disc-botao a img{
+        width: 100%;
+    }
     
 }   
 @media only screen and (max-width: 600px)
