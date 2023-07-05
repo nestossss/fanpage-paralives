@@ -162,6 +162,7 @@ h1{
     box-shadow: 2px 4px 15px #1d1d1dd8;
     text-align: center;
     margin-bottom: -100px;
+    z-index: 2;
 }
 #bandeira #textoBandeira{
     text-align: center;
@@ -171,7 +172,72 @@ h1{
     font-size:x-large;
     color: #eeeeee;
 }
-   
+
+.inicio-sep{
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    background-image: linear-gradient(#B5D28A 25%, #76D5CA);
+    border-radius: 20px;
+    position: relative;
+    top: -3vh;
+    margin-bottom: -3vh;
+    padding: 3vw;
+    padding-top:4vw;
+    width: 100%;
+    box-shadow: 0px 2px 6px #29292952;
+}
+
+#divisao{
+    width:100%;
+    height: 544px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#divisao p{
+    color: #fff;
+    font-size: 2vw;
+}
+#bbotao-novidades{
+    background-color: #56a1f7;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#bbotao-novidades:hover{
+    background-color: #1859af;
+    transform: scale(1.1);
+}
+
+#texto-sep{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36vw;
+    font-size: 20px;
+    flex-direction: column;
+    text-align: center;
+}
+#texto-sep p{
+    width: 50%;
+}
+#img-sala{
+    height: 45vh;
+    width: 65vh;
+}
+#img-sala img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+
+}
+
 #patreon{
     display: flex;
     align-items: center;
@@ -180,11 +246,14 @@ h1{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 60vw;
+    height: 70vw;
+    z-index: -1;
+    position: relative;
+    top: -1vw;
+    margin-bottom: -1vw;
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: 28px;
-    margin: 10% 0 10% 0;
 }
 #patreon img{
     width: 100%;
@@ -210,6 +279,49 @@ h1{
     flex-direction: column;
 }
 
+#inicio-ptazul{
+    background-color: #44B0FF;
+    box-shadow: 0px 0px 38px rgba(49, 49, 49, 0.877);
+    width:100%;
+    height: 10vw;
+}
+#secao-discord{
+    height: 50vw;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background-image: url(imagens/image\ 20.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+#disc-texto p{
+    font-size: 2vw;
+}
+#disc-texto h3{
+    font-size: 3vw;
+
+}
+#disc-cont{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 35vw;
+    height: 80% ;
+}
+#disc-botao{
+    width: fit-content;
+    transition: 0.5s
+}
+#disc-botao:hover{
+    scale:102%;
+    transition: 0.5s
+}
+
+
 
 /* ---- Footer ----*/
 
@@ -225,6 +337,7 @@ footer{
     margin-top: 1.5rem;
     grid-template-columns: 25% 25% 25% 25%;
     height: 50%;
+    filter: grayscale(100%);
 }
 .contatolink img{
     width: 4rem;
@@ -233,6 +346,7 @@ footer{
 }
 .logos{
     scale: 65%;
+    filter: grayscale(100%);
 }
 footer #nomefinal{
     height: 1em;
@@ -264,6 +378,7 @@ footer #nomefinal{
     display: none;
 }
 #banner-loja{
+    margin-bottom: 2%;
     width: 100%;
     height: auto;
 }
@@ -272,73 +387,77 @@ footer #nomefinal{
     box-shadow: 2px 5px 8px #1a0f0fa1;
 }
 .produtos-loja{
+    padding-left:5.1vw ;
+    padding-right: 5.1vw;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-.produtos-loja div{
-    text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 15em;
-    border-radius: 15px;
-    background-color: white;
-}
-.produto p{
-    font-family: 'KoHo', sans-serif;  
+    display: grid;
+    grid-template-columns: 15.5vw 15.5vw 15.5vw 15.5vw;
+    grid-template-rows: 24vw;
+    gap: 5.6vw;
 }
 .produto{
-    box-shadow: 2px 5px 8px #2c2c2ca1; 
-    width: 20vw;
-    margin-bottom: 40px;
+    background-color: #F2F2F2;
+    border-radius: 32px;
+    box-shadow: 0px 6px 6px #0000003f;
+    font-family: 'KoHo', sans-serif;
+    padding: 2vw;
+    width: 15.5vw;
+    height: 24vw;
+    transition:0.8s;
 }
-.produtos-loja div .posterImg{
-    height: 15em;
-    width: 200px;
+.produto:hover{
+    scale: 103%;
+    cursor:pointer;
+    transition: 0.8s ;
 }
-.produtos-loja div .posterImg img{
-    padding: 20px;
-    width: 180px; 
-}
-.posterPreco{
-    height: auto;
-    padding-bottom: 20px;
-    display: flex;
-    padding: 20px;
+
+.cont-produto{
+    display:flex;
     justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    font-size: 1.2vw;
+    width: 100%;
+    height: 100%;
+}   
+.poster-img{
+    width: 100%;
+    height:80%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.poster-img img{
+    height:100%;
+    width:100%;
+}
+.poster-preco{
+    margin-top:4%;
+    height: 16%;
+    display:flex;
+    justify-content: space-between;
+}
+.botao-comprar{
+    height:100%;
+    display:flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.botao-comprar a{
+    height: 87%;
+    transition: 0.6s;
+}
+.botao-comprar a:hover{
+    cursor:pointer;
+}
+.botao-comprar a:active{
+    scale:90%;
+    transition: 0.2s;
 }
 .botao-comprar img{
-    width: 30px;
-    cursor: pointer;
+    height: 100%;
 }
-.botao-comprar button:hover{
-    scale: 102%;
-    background-color: #c479fd;
-    transition: 300ms;
-    color: white;
-}
-.botao-comprar button:active{
-    scale: 98%;
-    background-color: #a762db;
-    transition: 103ms;
-    color: white;
-    font-weight: bold;
-}
-.botao-comprar button{
-    background-color: #a460d8;
-    border-radius: 20px;
-    border: none;
-    width: 10em;
-    height: auto;
-    color: #ffffff;
-    margin-top: 10%;
-    font-weight: bold;
-    transition: 300ms;
+.texto-comprar{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -348,6 +467,25 @@ footer #nomefinal{
     color: #ffffff;
     text-align: center;
 }
+
+.bnt-equipemidias {
+    background-color: #44B0FF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .bnt-equipemidias:hover {
+    transform: scale(1.1);
+    background-color: #3388FF;
+  }
+
+  .bnt-equipemidias:active {
+    transform: scale(0.9);
+    background-color: #1166CC;
+  }
 
 .nov-titulo{
     color: #ffffff;
@@ -425,12 +563,12 @@ footer #nomefinal{
     text-align: center;
 }
 .nov-atualiza-outro{
-    width: 84%;
+    width: 95%;
 }
 .nov-outro{
     display: flex;
     width: 100%;
-    height: 24vw;
+    height: 26vw;
     margin-top: 6%;
     overflow: hidden;
     border-radius: 8px;
@@ -538,12 +676,16 @@ footer #nomefinal{
     animation-fill-mode: both;
 }
 
-#titulao{ 
-    text-align: center;
-    padding: 2% 3%;
-    font-size: 15%; 
-    background-color: #44B0FF;
-    color: #000;
+.Aequipe{
+    color: white;
+    font-size: 1.5em;
+    padding: 2% 0;
+} 
+
+
+#titulo-foto{
+    display: block;
+    font-size: 2em;
 }
 
 @keyframes slidein {
@@ -558,7 +700,7 @@ footer #nomefinal{
 }
   
 #descricao{
-    font-size: 135%;
+    font-size: 22px;
     text-align: center;
     color: #ececec;
     animation-name: slidein;
@@ -570,6 +712,9 @@ footer #nomefinal{
 #ptAzul{
     height: 10vh;
     background-color: #44B0FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .div-equi{
@@ -603,7 +748,8 @@ footer #nomefinal{
 
 #contsecaovede{
     display: flex;
-    flex-direction: row ;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     padding-top: 8%;
     padding-bottom: 8%;
@@ -611,18 +757,13 @@ footer #nomefinal{
 }
 
 #contsecaovede p{
-    width: 50%;
+    width: 90%;
 }
 
 #seta img {
     width: 5%;
     padding-top: 10%;
     cursor: pointer;
-    animation-name: setaBaixo;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 
 #img-equipe{
@@ -637,24 +778,32 @@ footer #nomefinal{
 }
 
 #titulo_equipe{
-    font-size: 30px; 
     color: #44B0FF;
     text-align: center;
-
 }
 
 #text-foto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
     color: white;
-    font-size: 150%;
-    padding-right: 8%;
+    font-size: 1.6vw;
 }
-
+#titulo-foto{
+    display: block;
+    font-size: 3vw;
+    padding: 5% 0% 2%;
+}
 .grid-equipe{
     display: grid;
+    height: 1200px;
+    justify-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 5%;
+    row-gap: 5% ;
     column-gap: 10%;
-    padding: 5% 5%;
+    padding: 5%;
+    background-image: linear-gradient(#76D5CA 25%, #B5D28A);
 }
 
 .card {
@@ -662,8 +811,9 @@ footer #nomefinal{
     text-align: center;
     border-radius: 15px;
     box-shadow: 0px 0px 10px 2px #00000033;
-    height: 25vw;
+    height: 300px;
     transition: transform 0.5s ease;
+    width: 100%;
 
   }
   
@@ -672,7 +822,8 @@ footer #nomefinal{
   }
   
   .card img {
-    max-width: 50%;
+    width: 120px;
+    height: auto;
     border-radius: 50%;
     padding: 5% 5%;
   }
@@ -694,10 +845,64 @@ footer #nomefinal{
     color: white;
     margin-top: 5%;
   }
+
+  .conteudocard button:active{
+    
+  }
   
 
 /* --- Responsivo ---*/
+@media only screen and (max-width: 1229px) {
+    #disc-paralives{
+        display:none;
+    }
+    #disc-botao{
+        height: 40%;
+    }
+    #secao-discord{
+    height: 70vw;
+    }
+    #divisao{
+    flex-direction: column;
+    }
+    #texto-sep{
+        width: 100vh;
+    }
+    #texto-sep p{
+        font-size: 3vw;
+        padding: 1.5vw;
+        text-align: unset;
+    }
 
+
+}
+@media only screen and (max-width: 1116px) {
+    .grid-equipe {
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 1600px;
+    }
+    .produtos-loja{
+        padding-left:5.1vw ;
+        padding-right: 5.1vw;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 22vw 22vw 22vw;
+        grid-template-rows: 34.05vw;
+        gap: 6.4vw;
+    }
+    .produto{
+        background-color: #F2F2F2;
+        border-radius: 24px;
+        box-shadow: 0px 6px 6px #0000003f;
+        font-family: 'KoHo', sans-serif;
+        padding: 3.5vw;
+        width: 22vw; 
+        height: 34.05vw;
+    }
+    .cont-produto{
+        font-size: 1.5vw;
+    }   
+}
 @media only screen and (max-width: 1024px)
 {
     #titulo{
@@ -712,7 +917,6 @@ footer #nomefinal{
         height: 100%;
         width: 42vw;
     }
-    
 }
 @media only screen and (max-width: 900px)
 {
@@ -729,7 +933,6 @@ footer #nomefinal{
     #logo{
         position: relative;
         left: 30px;
-        
     }
     .nov-outro{
         height: 32vw;
@@ -753,6 +956,16 @@ footer #nomefinal{
     }
     .nov-outro-imagens{
         height: 26vw;
+    }
+    #titulo-foto{
+        font-size: 4.2vw;
+    }
+    #descricao-foto{
+        font-size: 2.8vw;
+    }
+    #img-equipe{
+        height: 80%;
+        
     }
 }
 @media only screen and (max-width: 786px)
@@ -832,6 +1045,19 @@ footer #nomefinal{
         align-items: center;
         justify-content: space-between;
     }
+    #secao-discord{
+        height: 120vw;
+    }
+    #disc-cont{
+        height: 70%;
+    }
+    #disc-botao{
+        height: 50%;
+        width: auto;
+    } 
+    #disc-botao img{
+        height: auto;
+    }
     .nov-outro-detalhes{
         position: relative;
         left: -10%;
@@ -856,7 +1082,36 @@ footer #nomefinal{
     .nov-outro-imagens{
         height: 48vw;
     }
+    #titulao{ 
+        font-size: 3.5vw;
+    }
+    #secao-vede{
+        height: 70%;
+    }
+    #contsecaovede{
+        flex-direction: column;
+        font-size: 50%;
+    }
+    #img-equipe{
+        height: 150%;
+        width: auto;
+    }
+    #text-foto{
+        width: 100%;
+    }
+    #descricao-foto{
+        font-size: 3em;
+    }
+    #titulo-foto{
+        font-size: 4em;
+    }
+    #texto-sep p{
+        font-size: 4.5vw;
+        padding: 1.5vw;
+        text-align: center;
+    }
 
+    
 }   
 @media only screen and (max-width: 600px)
 {
@@ -869,24 +1124,6 @@ footer #nomefinal{
     #twitterNavImg{
         display: none;
     }
-    .produtos-loja .produto{
-        width: 40vw;
-        font-size: 2.4vw;
-    }
-    .produtos-loja div .posterImg{
-        max-height: 15em;
-        width: 40vw;
-    }
-    .produtos-loja div .posterImg img{
-        padding: 2em;
-        width: 35vw; 
-    }
-    .produtos-loja .posterPreco, .texto-comprar, .botao-comprar{
-        width: 32vw;
-    }
-    .botao-comprar button{
-        font-size: 2.4vw;
-    }
     #patreon{
         height: 90vw;
     }
@@ -896,10 +1133,28 @@ footer #nomefinal{
     }
     .grid-equipe {
         grid-template-columns: 1fr 1fr;
+        height: 2600px;
+        row-gap: 1px;
     }
     .nov-titulo p{
         font-size: 10vw;
     }
+    .produtos-loja{
+        display: grid;
+        grid-template-columns: 36vw 36vw;
+        grid-template-rows: 52vw;
+        gap: 8vw;
+    }
+    .produto{
+        border-radius: 16px;
+        padding: 5vw;
+        width: 36vw;
+        height: 52vw;
+    }
+    .cont-produto{
+        font-size: 2.8vw;
+    }   
+    
 }
 @media only screen and (max-height: 300px)
 {
@@ -912,16 +1167,12 @@ footer #nomefinal{
             position: relative;
             bottom: -30px;
         }
+        
 }
-
 
 
 @media only screen and (max-width: 414px)
 {
-    #contsecaovede{
-        flex-direction: column;
-        font-size: 50%;
-    }
 
     #seta img{
         display: none;
@@ -944,11 +1195,6 @@ footer #nomefinal{
 
 }
 
-@media only screen and (max-width: 1116px) {
-    .grid-equipe {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
 
 
 
