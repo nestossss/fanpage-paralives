@@ -1,0 +1,1254 @@
+*{  
+    user-select:none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Belanosima', sans-serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/*----  Header  ----*/
+header{
+    background-color: #f8f8f8;
+    height: 80px;
+    width:100%;
+}
+nav{
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "logo botoesNav redes";
+    height: 100%;
+}
+#titulomobile, #menu_icon{
+    display:none;
+}
+#botoesNav{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+    grid-area: botoesNav;
+    
+}
+.botaoNav{
+    background-color: #44B0FF;
+    border: none;
+    border-radius: 24px;
+    color: #eeeeee;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.2rem;
+    width: 150px;
+    font-family: 'Belanosima', sans-serif;
+    transition: 200ms;
+}
+.botaoNav:hover{
+    background-color: #44B0FF;
+    cursor: pointer;
+    scale:103%;
+    transition: 200ms;
+}
+.botaoNav:active{
+    background-color: #56a1f7;
+    cursor: pointer;
+    scale:98%;
+    transition: 150ms;
+    box-shadow: inset 0px 0px 4px #525151;
+}
+#logo{
+    grid-area:logo;
+    height: 50px;
+    width: fit-content;
+    position:relative;
+    left: 65px;
+}
+#logo img{
+    width: 150px;
+    height: auto;
+}
+#redes{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    grid-area:redes;
+}
+#patreonNavImg{
+    width:120%;
+}
+#twitterNavImg{
+    width:120%;
+}
+#patreonNavImg:active{
+    scale:98%;
+    transition: 150ms;
+}
+#twitterNavImg:active{
+    scale:98%;
+}
+#twitterNav{
+    margin-left: 8%;
+}
+
+/* ---- Home ---- */
+
+#telainicial{
+    background-image: url(imagens/farol.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: -35px;
+    display: flex;
+    align-items: flex-end;
+    height: 100vh;
+    min-height: 400px;
+}
+#prancheta{
+    display: none;
+}
+#titulo{
+    font-family: 'Irish Grover', cursive;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 18%;
+    margin-bottom: 10%;
+    margin-left: 8%;
+}
+h1{
+    font-weight: 400;
+    font-size: 4rem;
+    color: #eeeeee;
+}   
+h1 span{
+    color: #44B0FF;
+}
+#wishlist{
+    font-family: 'Irish Grover', cursive;
+    font-weight: 600;
+    border: 0mm;
+    padding: 2em, 0.5em, 2em, 0.5em;
+    background-color: #ffffff;
+    color:#000000;
+    height: 3rem;
+    font-size: 1.25rem;
+    width: 7em;
+    border-radius: 2em;
+    transition: 0.5s;
+    cursor:pointer;
+}
+#wishlist:hover{
+    background-color: #ffffff;
+    transition: 0.5s;
+    scale: 103%;
+}
+#bandeira{
+    position: relative;
+    top: -10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 20vh;
+    min-height: 150px;
+    width: 100%;
+    background-color: #56a1f7;
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-family: 'Irish Grover', cursive;
+    text-align: center;
+    margin-bottom: -10vh;
+    z-index: 2;
+}
+#bandeira #textoBandeira{
+    text-align: center;
+    position: absolute;
+    height: 10vh;
+    width: 50%;
+    color: #eeeeee;
+}
+
+.inicio-sep{
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    min-height: 650px;
+    background-image: linear-gradient(#B5D28A 25%, #76D5CA);
+    z-index: 4;
+    padding: 3vw;
+    padding-top:4vw;
+    width: 100%;
+    box-shadow: 0px 2px 6px #29292952;
+}
+
+#divisao{
+    width:100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#divisao p{
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+#bbotao-novidades{
+    background-color: #56a1f7;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#bbotao-novidades:hover{
+    background-color: #1859af;
+    transform: scale(1.1);
+}
+
+#texto-sep{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45vw;
+    height: 60%;
+    font-size: 1.2rem;
+    flex-direction: column;
+    text-align: center;
+}
+#texto-sep p{
+    width:50%;
+}
+#img-sala{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    justify-self: center;
+    margin-left:6%;
+    height: 25vw;
+    width: 40vw;
+}
+#img-sala img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+}
+#patreon-ptazul{
+    position: relative;
+    top:-15vh;
+    margin-bottom:-5vh;
+}
+
+#patreon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(imagens/fundo_patreon1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70vw;
+    position: relative;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+}
+
+#patreon img{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 8px 8px #363636d8;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+#patreon img:hover{
+    scale: 105%;
+    transition: 500ms;
+}
+#patreon p{
+    margin: 0.5em;
+    text-shadow: 2px 2px 10px #18181881;
+}
+.botao_patreon{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 34vw;
+    flex-direction: column;
+}
+#patreon-titulo{
+    padding:1em 0em 1em 0em;
+}
+
+#inicio-ptazul{
+    background-color: #56a1f7;
+    width:100%;
+    height: 10vw;
+    z-index: 15;
+}
+#secao-discord{
+    height: 65vw;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background-image: url(imagens/image\ 20.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+#disc-texto p{
+    font-size: 1.5rem;
+}
+#disc-texto h3{
+    font-size: 2.2rem;
+
+}
+#disc-cont{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 45vw;
+    height: 80% ;
+}
+#disc-botao{
+    width: fit-content;
+    transition: 0.5s
+}
+#disc-botao:hover{
+    scale:102%;
+    transition: 0.5s
+}
+
+
+
+/* ---- Footer ----*/
+
+footer{
+    background-color: #3b3b3b;
+    height: 12em;
+    font-size: 1.2rem;
+    color:#ffffff;
+    text-align: center;
+}
+.canais{
+    display: grid;
+    margin-top: 1.5rem;
+    grid-template-columns: 25% 25% 25% 25%;
+    height: 50%;
+    filter: grayscale(100%);
+}
+.contatolink img{
+    width: 4rem;
+    height: auto;
+    vertical-align: middle;
+}
+.logos{
+    scale: 65%;
+    filter: grayscale(100%);
+}
+footer #nomefinal{
+    height: 1em;
+}
+.linkfooter{
+    transition: 100ms;
+    text-decoration-line: none;
+    color: #eeeeee;
+}
+.linkfooter:hover{
+    transform: scale(150%);
+    transition: 100ms;
+    color: #a0a0a0;
+}
+
+/* ---- Loja ----*/
+
+#loja{
+    background-color: #5f9ea0;
+    height: fit-content;
+}
+#grid-loja{
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 4vw;
+    padding: 5% 5% 5% 5%;
+}
+#banner-mobile{
+    display: none;
+}
+#banner-loja{
+    margin-bottom: 2%;
+    width: 100%;
+    height: auto;
+}
+#banner-loja img{
+    width: 100%;
+    box-shadow: 2px 5px 8px #1a0f0fa1;
+}
+.produtos-loja{
+    padding-left:5.1vw ;
+    padding-right: 5.1vw;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 15.5vw 15.5vw 15.5vw 15.5vw;
+    grid-template-rows: 24vw;
+    gap: 5.6vw;
+}
+.produto{
+    background-color: #F2F2F2;
+    border-radius: 32px;
+    box-shadow: 0px 6px 6px #0000003f;
+    font-family: 'KoHo', sans-serif;
+    padding: 2vw;
+    width: 15.5vw;
+    height: 24vw;
+    transition:0.8s;
+}
+.produto:hover{
+    scale: 103%;
+    cursor:pointer;
+    transition: 0.8s ;
+}
+
+.cont-produto{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 0.95rem;
+    width: 100%;
+    height: 100%;
+}   
+.poster-img{
+    width: 100%;
+    height:80%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.poster-img img{
+    height:100%;
+    width:100%;
+}
+.poster-preco{
+    margin-top:4%;
+    height: 16%;
+    display:flex;
+    justify-content: space-between;
+}
+.botao-comprar{
+    height:100%;
+    display:flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.botao-comprar a{
+    height: 87%;
+    transition: 0.6s;
+}
+.botao-comprar a:hover{
+    cursor:pointer;
+}
+.botao-comprar a:active{
+    scale:90%;
+    transition: 0.2s;
+}
+.botao-comprar img{
+    height: 100%;
+}
+.texto-comprar{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* ---- Novidades ---- */
+
+#nov-recente, #nov-outros{
+    color: #ffffff;
+    text-align: center;
+}
+
+.bnt-equipemidias {
+    background-color: #44B0FF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .bnt-equipemidias:hover {
+    transform: scale(1.1);
+    background-color: #3388FF;
+  }
+
+  .bnt-equipemidias:active {
+    transform: scale(0.9);
+    background-color: #1166CC;
+  }
+
+.nov-titulo{
+    color: #ffffff;
+    text-shadow: 2px 2px 2px#00000033;
+    font-family: 'Irish Grover', cursive;
+    border-radius: 5px;
+    width: fit-content;
+}
+.nov-titulo p{
+    font-size: 3.2rem;
+}
+
+#nov-recente{
+    font-family: 'Irish Grover', cursive;
+    background-image: linear-gradient(#80C7C9 25%, #E4FEFF);
+}
+
+#cont-nov-recente{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+#nov-atualiza-recente{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 6%;
+    margin-bottom: 0%;
+}
+.cont-atualiza-recente{
+    box-shadow: 2px 4px 6px#1a0f0fa1;
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: scale 500ms;
+}
+.cont-atualiza-recente img{
+    height: 100%;
+}
+.nov-recente-texto{
+    background-color: #FB954B;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding: 0.20em;
+    padding-bottom: 0.35em;
+    scale:140%;
+    rotate: -2deg;
+}
+.nov-recente-texto p{
+    rotate: 2deg;
+}
+.cont-atualiza-recente:hover{
+    scale: 105%;
+    transition: 500ms;
+}
+
+#nov-outros{
+    background-image: linear-gradient( #A6D915, #EBDD64 60%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+}
+#cont-nov-outros{
+    padding: 6%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.nov-atualiza-outro{
+    width: 95%;
+}
+.nov-outro{
+    display: flex;
+    width: 100%;
+    height: 26vw;
+    margin-top: 6%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px#202020a1;
+}
+.nov-data{
+    z-index: 1;
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: 'Irish Grover', cursive;
+}
+.nov-data-texto{
+    position: absolute;
+}
+.nov-data-texto p{
+    position: relative;
+    font-size: 2rem;
+    right: 15%;
+}
+.nov-data-img, .nov-data-img img{
+    height: 100%;
+}
+
+.nov-outro-detalhes{
+    position: relative;
+    left: -5%;
+    margin-right: -5%;
+    z-index: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 105%;
+}
+.nov-outro-imagens{
+    display: flex;
+    justify-content: space-between;
+    height: 85%;
+}
+.nov-outro-imagem{
+    height: 100%;
+    overflow: hidden;
+    width: calc(100%/3);
+}
+.nov-outro-imagem img{
+    scale:120%;
+    filter:saturate(60%) blur(1px);
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+.nov-outro-imagem img:hover{
+    scale:100%;
+    filter:saturate(100%) blur(0px);
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+
+
+.nov-nome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    background-color: #ffffff;
+    color:#F68B27;
+    font-size: 2rem;
+}
+.nov-nome p{
+    position:relative;
+    left: -4%;
+    width: 92%;
+}
+.nov-outro-desc{
+    width: 100%;
+    margin-top: 3%;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 1px 2px 6px#202020a1;
+    color:#000000;
+}
+.nov-outro-desc p{
+    padding: 0.5em;
+    font-size: 1.2rem;
+}
+
+.outro-margin{
+    margin-top: 5%;
+}
+
+/* ---- Equipe ---- */
+
+#t3 {
+    color: #44B0FF;
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    animation-name: slidein;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+.Aequipe{
+    color: white;
+    font-size: 1.5rem;
+    padding: 2% 0;
+} 
+
+
+#titulo-foto{
+    display: block;
+    font-size: 2rem;
+}
+
+@keyframes slidein {
+    0% {
+        opacity: 0;
+        transform: translateY(-20%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+}
+  
+#descricao{
+    font-size: 1.45rem;
+    text-align: center;
+    color: #ececec;
+    animation-name: slidein;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+#ptAzul{
+    height: 10vh;
+    background-color: #44B0FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-equi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url(imagens/fparalives.jpg);
+    background-size: cover;
+    background-position: center;  
+}
+
+.div-conteiner {
+    height: fit-content;
+    text-align: center;
+    padding: 10%;
+}
+
+#secao-vede{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 100%;
+    box-shadow: 10px 10px 7px #5858587c;
+    background-image: url(imagens/Triangulovede.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#contsecaovede{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    text-align: center;
+}
+
+#contsecaovede p{
+    width: 90%;
+}
+
+#seta img {
+    width: 5%;
+    padding-top: 10%;
+    cursor: pointer;
+}
+
+#img-equipe{
+    width: 50%;
+}
+
+
+#img-equipe img{
+    width: 75%;
+    border-radius: 40px;
+    border: white solid 3px;
+}
+
+#titulo_equipe{
+    color: #44B0FF;
+    text-align: center;
+}
+
+#text-foto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    color: white;
+    font-size: 1.3rem;
+}
+#titulo-foto{
+    display: block;
+    font-size: 3rem;
+    padding: 5% 0% 2%;
+}
+.grid-equipe{
+    display: grid;
+    height: 1200px;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 5% ;
+    column-gap: 10%;
+    padding: 5%;
+    background-image: linear-gradient(#76D5CA 25%, #B5D28A);
+}
+
+.card {
+    background-color: #f8f8f8;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 2px #00000033;
+    height: 300px;
+    transition: transform 0.5s ease;
+    width: 100%;
+
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+  }
+  
+  .card img {
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+    padding: 5% 5%;
+  }
+  
+  .cargo {
+    padding: 2%;
+    display: block;
+    color: #3b3b3b;
+    font-size: 1rem;
+  }
+  
+  .conteudocard button {
+    background-color: #44B0FF;
+    border-radius: 10px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    margin-top: 5%;
+  }
+  
+
+/* --- Responsivo ---*/
+@media only screen and (max-width: 1229px) {
+    #disc-paralives{
+        display:none;
+    }
+    #disc-botao{
+    height:fit-content;
+    }
+    #disc-cont{
+    width: 60vw;
+    }
+    #disc-texto p{
+    width: 100%;
+    font-size: 2.2rem;
+    }
+    #disc-texto h3{
+       font-size: 3rem;
+    }
+    #disc-texto{
+    width: 100%;
+    } 
+    #secao-discord{
+    height: 75vw;
+    }
+    .inicio-sep{
+    height:80vw;
+    }
+    #divisao{
+    height: fit-content;
+    flex-direction: column;
+    justify-content:center;
+    }
+    #texto-sep{
+        height:35%;
+    }
+    #texto-sep p{
+	width: 100%;
+        font-size: 2rem;
+        padding: 1.5vw;
+        text-align: unset;
+    }
+    #img-sala{
+        margin: 0;
+    }
+
+}
+@media only screen and (max-width: 1116px) {
+    .grid-equipe {
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 1600px;
+    }
+    .produtos-loja{
+        padding-left:5.1vw ;
+        padding-right: 5.1vw;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 22vw 22vw 22vw;
+        grid-template-rows: 34.05vw;
+        gap: 6.4vw;
+    }
+    .produto{
+        background-color: #F2F2F2;
+        border-radius: 24px;
+        box-shadow: 0px 6px 6px #0000003f;
+        font-family: 'KoHo', sans-serif;
+        padding: 3.5vw;
+        width: 22vw; 
+        height: 34.05vw;
+    }
+    .cont-produto{
+        font-size: 1.1rem;
+    }
+    #patreon{
+        height: 80vw;
+        font-size: 1.5rem;
+    }   
+}
+@media only screen and (max-width: 1024px)
+{
+    #titulo{
+        position:relative;
+        bottom: 50px;
+    }
+    #patreon{
+        height: 80vw;
+        font-size: 1.7rem;
+    }
+    .botao_patreon{
+        height: 100%;
+        width: 42vw;
+    }
+}
+@media only screen and (max-width: 900px)
+{
+    #patreon{
+        height: 80vw;
+        font-size: 1.5rem;
+    }
+    #banner-completo{
+        display: none;
+    }
+    #banner-mobile{
+        display: block;
+    }
+    #titulo{
+        position: relative;
+        bottom: 75px;
+    }
+    #logo{
+        position: relative;
+        left: 30px;
+    }
+    .nov-outro{
+        height: 32vw;
+    }
+    .nov-outro-imagem img, .nov-outro-imagem img:hover{
+        scale:100%;
+        filter:saturate(100%) blur(0px);
+        height: 100%;
+        width: 100%;
+        transition: 0;
+    }
+    .nov-outro-imagem.nov-outro-img3, .nov-outro-imagem.nov-outro-img3 img{
+        display: none;
+    }
+    .nov-outro-imagem{
+        width: 50%;
+    }
+    .nov-nome{
+        font-size: 3vw;
+        height: 2em
+    }
+    .nov-outro-imagens{
+        height: 26vw;
+    }
+    #titulo-foto{
+        font-size: 4.2vw;
+    }
+    #descricao-foto{
+        font-size: 2.8vw;
+    }
+    #img-equipe{
+        height: 80%;
+    }
+}
+@media only screen and (max-width: 786px)
+{
+    #botoesNav, .botaoNav, #titulo h1, #logo{
+        display: none;
+    }
+    #banner-loja{
+        width: 100%;
+        height: auto;
+    }
+    #banner-loja img{
+        width: 100%;
+        box-shadow: 2px 5px 8px rgba(26, 15, 15, 0.63);
+    }
+    #titulomobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: botoesNav;
+    }
+    h2{
+        font-size: 2.2rem;
+        font-family: 'Irish Grover', cursive;
+        color:#000000;
+    }
+    #menu_icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: logo;
+    }
+    #telainicial{
+        align-items: center;
+    }
+    #titulo{
+        position: relative;
+        top: -7em;
+        margin-left: 0;
+    }
+    #prancheta{
+        display: block;
+        width: 16em;
+        rotate: 1deg;
+        }
+    #wishlist{
+        rotate: -5deg;
+        position: relative;
+        left: 10px;
+    }
+    #patreon{
+        height: 80vw;
+        font-size: 1.5rem;
+    }
+    .botao_patreon{
+        height: 100%;
+        width: 50vw;
+    }
+}
+@media only screen and (max-width: 660px)
+{
+    .nov-titulo{
+        padding: 6%;
+    }
+    #nov-atualiza-recente{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        flex-direction: column;
+    }
+    .cont-atualiza-recente{
+        width: 100%;
+        margin: 10%;
+    }
+    #cont-nov-recente{
+        align-items: center;
+        justify-content: space-between;
+    }
+    #secao-discord{
+        height: 140vw;
+    }
+    #disc-cont{
+        height: 70%;
+    }
+    #disc-botao{
+        height: 50%;
+        width: auto;
+    } 
+    #disc-botao img{
+        height: auto;
+    }
+    #disc-texto p{
+    font-size: 5vw;
+    }
+    #disc-texto h3{
+       font-size: 8vw;
+    }
+    .nov-outro-detalhes{
+        position: relative;
+        left: -10%;
+        margin-right: -10%;
+    }
+    .nov-outro-imagem.nov-outro-img2, .nov-outro-imagem.nov-outro-img2 img{
+        display: none;
+    }
+    .nov-outro-imagem{
+        width: 100%;
+    }
+    .nov-outro{
+        height: 60vw;
+    }
+    .nov-atualiza-outro{
+        width: 100%;
+    }
+    .nov-nome{
+        font-size: 4vw;
+        height: 12vw;
+    }
+    .nov-outro-imagens{
+        height: 48vw;
+    }
+    #titulao{ 
+        font-size: 3.5vw;
+    }
+    #secao-vede{
+        height: 70%;
+    }
+    #contsecaovede{
+        flex-direction: column;
+        font-size: 50%;
+    }
+    #img-equipe{
+        height: 150%;
+        width: auto;
+    }
+    #text-foto{
+        width: 100%;
+    }
+    #descricao-foto{
+        font-size: 3em;
+    }
+    #titulo-foto{
+        font-size: 4em;
+    }
+    #divisao{
+        height:fit-content;
+    }
+    #texto-sep{
+        width: 65vw;
+    }
+    #texto-sep p{
+        font-size: 4.5vw;
+        padding: 1.5vw;
+        text-align: center;
+    }
+    #img-sala{
+        width: 65vw;
+        height: auto;
+    }
+    #img-sala img{
+        border-radius: 14px;
+    }
+    #disc-botao a img{
+        width: 100%;
+    }
+    
+}   
+@media only screen and (max-width: 600px)
+{
+    .canais{
+    grid-template-columns: 50% 50%;
+    }
+    footer{
+        height: 18em;
+    }
+    #twitterNavImg{
+        display: none;
+    }
+    #patreon{
+        height: 90vw;
+    }
+    .botao_patreon{
+        height: 100%;
+        width: 60vw;
+    }
+    .grid-equipe {
+        grid-template-columns: 1fr 1fr;
+        height: 2600px;
+        row-gap: 1px;
+    }
+    .nov-titulo p{
+        font-size: 10vw;
+    }
+    .produtos-loja{
+        display: grid;
+        grid-template-columns: 36vw 36vw;
+        grid-template-rows: 52vw;
+        gap: 8vw;
+    }
+    .produto{
+        border-radius: 16px;
+        padding: 5vw;
+        width: 36vw;
+        height: 52vw;
+    }
+    .cont-produto{
+        font-size: 2.8vw;
+    }   
+    
+}
+
+
+@media only screen and (max-width: 400px)
+{
+    #seta img{
+        display: none;
+    }
+    #patreon{
+        height: 100vw;
+        font-size: 1.2rem;
+    }
+    .botao_patreon{
+        height: 100%;
+        width: 75vw;
+    }
+}
+
+@media only screen and (max-height: 400px)
+{
+    #bandeira{
+        position: relative;
+        top: -35px;
+        margin-bottom: -35px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background-color: #e4e4e4d3;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #c7c7c7;
+}
