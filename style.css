@@ -31,7 +31,6 @@ nav{
 }
 #botoesNav{
     display:flex;
-    flex-direction: row;
     align-items: center;
     justify-content:space-evenly;
     grid-area: botoesNav;
@@ -160,6 +159,8 @@ h1 span{
     height: 20vh;
     min-height: 150px;
     width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
     background-color: #56a1f7;
     color: #ffffff;
     font-size: 1.6rem;
@@ -178,34 +179,32 @@ h1 span{
 
 .inicio-sep{
     display: flex;
+    justify-content: center;
     align-items: center;
-    height: 80vh;
-    min-height: 650px;
+    height: fit-content;
     background-image: linear-gradient(#B5D28A 25%, #76D5CA);
-    z-index: 4;
     padding: 3vw;
-    padding-top:4vw;
+    padding-top: 24vh;
+    padding-bottom: 24vh;
     width: 100%;
     box-shadow: 0px 2px 6px #29292952;
 }
 
 #divisao{
-    width:100%;
     height: fit-content;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     
 }
 #divisao p{
     color: #ffffff;
-    font-size: 1.4rem;
+    font-size: 2vw;
 }
 #bbotao-novidades{
     background-color: #56a1f7;
     color: #ffffff;
     padding: 10px 20px;
-    font-size: 0.9rem;
     border: none;
     border-radius: 5px;
     transition: all 0.3s ease;
@@ -217,17 +216,19 @@ h1 span{
 }
 
 #texto-sep{
+    padding: 1%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 45vw;
-    height: 60%;
-    font-size: 1.2rem;
+    height:25vw;
+    font-size: 1.25rem;
     flex-direction: column;
     text-align: center;
 }
 #texto-sep p{
-    width:50%;
+    width:64%;
+    
 }
 #img-sala{
     display: flex;
@@ -261,7 +262,7 @@ h1 span{
     position: relative;
     text-align: center;
     color: rgb(255, 255, 255);
-    font-size: 2rem;
+    font-size: 1.85rem;
 }
 
 #patreon img{
@@ -292,9 +293,11 @@ h1 span{
 }
 
 #inicio-ptazul{
+    position: relative;
     background-color: #56a1f7;
     width:100%;
-    height: 10vw;
+    min-height: 20px;
+    height: 10vh;
     z-index: 15;
 }
 #secao-discord{
@@ -309,10 +312,10 @@ h1 span{
     text-align: center;
 }
 #disc-texto p{
-    font-size: 1.5rem;
+    font-size: 2vw;
 }
 #disc-texto h3{
-    font-size: 2.2rem;
+    font-size: 3vw;
 
 }
 #disc-cont{
@@ -325,12 +328,19 @@ h1 span{
     height: 80% ;
 }
 #disc-botao{
-    width: fit-content;
-    transition: 0.5s
+    width: 100%;
+    transition: 0.5s;
+}
+#disc-botao img{
+    width: 55%;
 }
 #disc-botao:hover{
     scale:102%;
     transition: 0.5s
+}
+#disc-paralives iframe{
+    width: 28vw;
+    height: 16vw;
 }
 
 
@@ -339,39 +349,67 @@ h1 span{
 
 footer{
     background-color: #3b3b3b;
-    height: 12em;
-    font-size: 1.2rem;
-    color:#ffffff;
+}
+
+.footer-cont{
+    max-width: 1170px;
+}
+
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 5% 5%;
+}
+
+.footer-col h4 {
+    font-size: 1.3rem;
+    color: rgb(212, 212, 212);
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 1.15em;
+    text-transform: capitalize;
+    color: #707070;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: rgb(146, 146, 146);
+    padding-left: 10px;
+}
+.footer-col .socialMedia a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 10px 5px;
     text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #F2F2F2;
+    transition: all 0.3s ease;
 }
-.canais{
-    display: grid;
-    margin-top: 1.5rem;
-    grid-template-columns: 25% 25% 25% 25%;
-    height: 50%;
-    filter: grayscale(100%);
+
+.footer-col .socialMedia a:hover{
+    color: #202020;
+    background-color: #F2F2F2;
 }
-.contatolink img{
-    width: 4rem;
-    height: auto;
-    vertical-align: middle;
-}
-.logos{
-    scale: 65%;
-    filter: grayscale(100%);
-}
-footer #nomefinal{
-    height: 1em;
-}
-.linkfooter{
-    transition: 100ms;
-    text-decoration-line: none;
-    color: #eeeeee;
-}
-.linkfooter:hover{
-    transform: scale(150%);
-    transition: 100ms;
-    color: #a0a0a0;
+.footer-row2{
+    padding-bottom: 4%;
+    color: #d4d4d4;
+    width:100%;
+    text-align: center;
 }
 
 /* ---- Loja ----*/
@@ -427,7 +465,7 @@ footer #nomefinal{
     display:flex;
     justify-content: space-between;
     flex-direction: column;
-    font-size: 0.95rem;
+    font-size: 1.2vw;
     width: 100%;
     height: 100%;
 }   
@@ -479,26 +517,6 @@ footer #nomefinal{
     color: #ffffff;
     text-align: center;
 }
-
-.bnt-equipemidias {
-    background-color: #44B0FF;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    transition: transform 0.3s;
-    cursor: pointer;
-  }
-  
-  .bnt-equipemidias:hover {
-    transform: scale(1.1);
-    background-color: #3388FF;
-  }
-
-  .bnt-equipemidias:active {
-    transform: scale(0.9);
-    background-color: #1166CC;
-  }
-
 .nov-titulo{
     color: #ffffff;
     text-shadow: 2px 2px 2px#00000033;
@@ -507,7 +525,7 @@ footer #nomefinal{
     width: fit-content;
 }
 .nov-titulo p{
-    font-size: 3.2rem;
+    font-size: 3.15rem;
 }
 
 #nov-recente{
@@ -600,7 +618,7 @@ footer #nomefinal{
 }
 .nov-data-texto p{
     position: relative;
-    font-size: 2rem;
+    font-size: 1.75rem;
     right: 15%;
 }
 .nov-data-img, .nov-data-img img{
@@ -647,11 +665,11 @@ footer #nomefinal{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 15%;
+    height: 100%;
     width: 100%;
     background-color: #ffffff;
     color:#F68B27;
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 .nov-nome p{
     position:relative;
@@ -668,7 +686,7 @@ footer #nomefinal{
 }
 .nov-outro-desc p{
     padding: 0.5em;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
 }
 
 .outro-margin{
@@ -699,7 +717,7 @@ footer #nomefinal{
 
 #titulo-foto{
     display: block;
-    font-size: 2rem;
+    font-size: 2em;
 }
 
 @keyframes slidein {
@@ -714,7 +732,7 @@ footer #nomefinal{
 }
   
 #descricao{
-    font-size: 1.45rem;
+    font-size: 1.4rem;
     text-align: center;
     color: #ececec;
     animation-name: slidein;
@@ -723,12 +741,16 @@ footer #nomefinal{
     animation-fill-mode: both;
 }
 
-#ptAzul{
+.ptAzul{
     height: 10vh;
+    min-height: 4vw;
     background-color: #44B0FF;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.ptAzul p{
+    padding: 4vh;
 }
 
 .div-equi{
@@ -776,7 +798,7 @@ footer #nomefinal{
 
 #seta img {
     width: 5%;
-    padding-top: 10%;
+    margin-top: 10%;
     cursor: pointer;
 }
 
@@ -802,11 +824,11 @@ footer #nomefinal{
     align-items: center;
     width: 50%;
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.6vw;
 }
 #titulo-foto{
     display: block;
-    font-size: 3rem;
+    font-size: 3vw;
     padding: 5% 0% 2%;
 }
 .grid-equipe{
@@ -821,11 +843,15 @@ footer #nomefinal{
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     background-color: #f8f8f8;
     text-align: center;
     border-radius: 15px;
     box-shadow: 0px 0px 10px 2px #00000033;
-    height: 300px;
+    height: 100%;
     transition: transform 0.5s ease;
     width: 100%;
 
@@ -848,8 +874,11 @@ footer #nomefinal{
     color: #3b3b3b;
     font-size: 1rem;
   }
-  
-  .conteudocard button {
+  .conteudocard{
+    margin-top: 4.4vh;
+  }
+  .card button {
+    justify-self: flex-end;
     background-color: #44B0FF;
     border-radius: 10px;
     text-align: center;
@@ -857,60 +886,107 @@ footer #nomefinal{
     cursor: pointer;
     font-weight: bold;
     color: white;
-    margin-top: 5%;
+    margin-bottom: 5vh;
   }
+  .bnt-equipemidias {
+    justify-self: flex-end;
+    background-color: #44B0FF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    transition: transform 0.3s, background-color 0.2s;
+    cursor: pointer;
+  }
+  
+  .bnt-equipemidias:hover {
+    transition: 200ms;
+    background-color: #3388FF;
+  }
+
+  .bnt-equipemidias:active {
+    transform: scale(0.9);
+    background-color: #1166CC;
+  }
+
   
 
 /* --- Responsivo ---*/
-@media only screen and (max-width: 1229px) {
-    #disc-paralives{
-        display:none;
+
+@media only screen and (min-width: 1400px){
+    .nov-recente-texto{
+        scale: 180%;
     }
-    #disc-botao{
-    height:fit-content;
-    }
-    #disc-cont{
-    width: 60vw;
-    }
-    #disc-texto p{
-    width: 100%;
-    font-size: 2.2rem;
-    }
-    #disc-texto h3{
-       font-size: 3rem;
-    }
-    #disc-texto{
-    width: 100%;
-    } 
-    #secao-discord{
-    height: 75vw;
-    }
+}
+@media only screen and (max-aspect-ratio: 3/2){
     .inicio-sep{
-    height:80vw;
+        padding-top: 4vh ;
+        padding-bottom: 4vh;
     }
     #divisao{
-    height: fit-content;
-    flex-direction: column;
-    justify-content:center;
+        width: 60%;
+        padding-bottom:12%;
+        padding-top:12%;
+        height: fit-content;
+        flex-direction: column;
+        justify-content:space-around;
     }
     #texto-sep{
-        height:35%;
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        height:100%;
     }
     #texto-sep p{
-	width: 100%;
-        font-size: 2rem;
+        font-size: 3vw;
+        width: 100%;
         padding: 1.5vw;
+        margin-bottom: 5%;
         text-align: unset;
     }
     #img-sala{
         margin: 0;
+        height: fit-content;
+        width: 100%;
     }
+    #img-sala img{
+        height: 100%;
+        width: 100%;
+        border-radius: 12px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #disc-paralives{
+        display:none;
+    }
+    #disc-botao{
+        height:fit-content;
+    }
+    #disc-texto p{
+        width: 100%;
+        font-size: 3vw;
+    }
+    #disc-texto h3{
+        font-size: 5vw;
+    }
+    #disc-texto{
+        width: 100%;
+    } 
+    #disc-cont{
+        width: 60vw;
+    }
+    #secao-discord{
+        height: 75vw;
+    }
+    
 
 }
 @media only screen and (max-width: 1116px) {
     .grid-equipe {
         grid-template-columns: 1fr 1fr 1fr;
-        height: 1600px;
+        height: 1700px;
     }
     .produtos-loja{
         padding-left:5.1vw ;
@@ -931,12 +1007,8 @@ footer #nomefinal{
         height: 34.05vw;
     }
     .cont-produto{
-        font-size: 1.1rem;
+        font-size: 1.5vw;
     }
-    #patreon{
-        height: 80vw;
-        font-size: 1.5rem;
-    }   
 }
 @media only screen and (max-width: 1024px)
 {
@@ -945,8 +1017,9 @@ footer #nomefinal{
         bottom: 50px;
     }
     #patreon{
-        height: 80vw;
-        font-size: 1.7rem;
+        min-height: 100vw;
+        height: 90vh;
+        font-size: 3vw;
     }
     .botao_patreon{
         height: 100%;
@@ -955,10 +1028,6 @@ footer #nomefinal{
 }
 @media only screen and (max-width: 900px)
 {
-    #patreon{
-        height: 80vw;
-        font-size: 1.5rem;
-    }
     #banner-completo{
         display: none;
     }
@@ -974,11 +1043,11 @@ footer #nomefinal{
         left: 30px;
     }
     .nov-outro{
-        height: 32vw;
+        height: 35vw;
     }
     .nov-outro-imagem img, .nov-outro-imagem img:hover{
         scale:100%;
-        filter:saturate(100%) blur(0px);
+        filter:none;
         height: 100%;
         width: 100%;
         transition: 0;
@@ -991,10 +1060,9 @@ footer #nomefinal{
     }
     .nov-nome{
         font-size: 3vw;
-        height: 2em
     }
     .nov-outro-imagens{
-        height: 26vw;
+        height: 28vw;
     }
     #titulo-foto{
         font-size: 4.2vw;
@@ -1026,7 +1094,7 @@ footer #nomefinal{
         grid-area: botoesNav;
     }
     h2{
-        font-size: 2.2rem;
+        font-size: 2.25rem;
         font-family: 'Irish Grover', cursive;
         color:#000000;
     }
@@ -1055,16 +1123,28 @@ footer #nomefinal{
         left: 10px;
     }
     #patreon{
-        height: 80vw;
-        font-size: 1.5rem;
+        font-size: 4vw;
     }
     .botao_patreon{
         height: 100%;
         width: 50vw;
     }
+    .footer-col{
+        width: 90%;
+        margin-bottom: 30px
+
+    }
 }
 @media only screen and (max-width: 660px)
 {
+    #titulo{
+        position:relative;
+        bottom: 50px;
+    }
+    .botao_patreon{
+        height: 100%;
+        width: 42vw;
+    }
     .nov-titulo{
         padding: 6%;
     }
@@ -1087,17 +1167,14 @@ footer #nomefinal{
         height: 140vw;
     }
     #disc-cont{
+        justify-content: space-around;
         height: 70%;
     }
-    #disc-botao{
-        height: 50%;
-        width: auto;
-    } 
     #disc-botao img{
         height: auto;
     }
     #disc-texto p{
-    font-size: 5vw;
+        font-size: 5vw;
     }
     #disc-texto h3{
        font-size: 8vw;
@@ -1120,8 +1197,14 @@ footer #nomefinal{
         width: 100%;
     }
     .nov-nome{
-        font-size: 4vw;
+        font-size: 5vw;
         height: 12vw;
+    }
+    .nov-nome p{
+        left: 0;
+    }
+    .nov-outro-desc{
+        font-size: 0.8rem;
     }
     .nov-outro-imagens{
         height: 48vw;
@@ -1149,51 +1232,51 @@ footer #nomefinal{
     #titulo-foto{
         font-size: 4em;
     }
-    #divisao{
-        height:fit-content;
-    }
-    #texto-sep{
-        width: 65vw;
-    }
     #texto-sep p{
-        font-size: 4.5vw;
+        font-size: 2vw;
         padding: 1.5vw;
         text-align: center;
-    }
-    #img-sala{
-        width: 65vw;
-        height: auto;
-    }
-    #img-sala img{
-        border-radius: 14px;
     }
     #disc-botao a img{
         width: 100%;
     }
+    .grid-equipe {
+        grid-template-columns: 1fr 1fr;
+        height: 2600px;
+        row-gap: 2%;
+    }
+    .card{
+        height: 90%;
+    }
     
 }   
+@media only screen and (max-aspect-ratio: 3/2) and (max-width: 660px){
+    #texto-sep p{
+        font-size: 5vw;
+        width: 100%;
+        padding: 1.5vw;
+        margin-bottom: 5%;
+        text-align: unset;
+    }
+    #divisao{
+        width: 70%;
+    }
+}
 @media only screen and (max-width: 600px)
 {
     .canais{
     grid-template-columns: 50% 50%;
     }
-    footer{
-        height: 18em;
-    }
     #twitterNavImg{
         display: none;
     }
     #patreon{
-        height: 90vw;
+        min-height: 100vw;
+        height: 80vh;
     }
     .botao_patreon{
         height: 100%;
         width: 60vw;
-    }
-    .grid-equipe {
-        grid-template-columns: 1fr 1fr;
-        height: 2600px;
-        row-gap: 1px;
     }
     .nov-titulo p{
         font-size: 10vw;
@@ -1212,23 +1295,42 @@ footer #nomefinal{
     }
     .cont-produto{
         font-size: 2.8vw;
-    }   
-    
+    }
+    .footer-col {
+        width: 90%;
+        margin-bottom: 30px;
+        
+    }
+
 }
-
-
-@media only screen and (max-width: 400px)
+@media only screen and (max-width: 414px)
 {
     #seta img{
         display: none;
     }
     #patreon{
-        height: 100vw;
-        font-size: 1.2rem;
+        min-height: 100vw;
+        height: 80vh;
+        font-size: 6vw;
     }
     .botao_patreon{
         height: 100%;
         width: 75vw;
+    }
+    .grid-equipe {
+        grid-template-columns: 1fr;
+        height: 3900px;
+        row-gap: 1%;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    .card{
+        padding-left: 15%;
+        padding-right: 15%;
+        height: 90%;
+    }
+    .conteudocard{
+        margin-top: 3.5vw;
     }
 }
 
@@ -1238,6 +1340,10 @@ footer #nomefinal{
         position: relative;
         top: -35px;
         margin-bottom: -35px;
+    }
+    #bandeira p{
+        padding-left: 15%;
+        padding-right: 15%;
     }
 }
 
